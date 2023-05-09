@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    /* ### Primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* ### Neutral */
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --box-bg: hsl(0, 0%, 100%);
+    --bg-color: hsl(0, 0%, 98%);
+}
+
+html {
+    font-size: 68.25%;
+}
+body {
+    font-size: 1.5rem;
+    background-color: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    padding: 80px 40px;
+}
+
+
+/* !TITULOS */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--Very-Dark-Blue);
+}
+
+.main-paragraph {
+    max-width: 510px;
+    margin: 22px auto;
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--Grayish-Blue);
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: var(--Very-Dark-Blue);
+}
+
+.boxes-paragraph {
+    margin-top: 6px;
+    font-size: 1.1rem;
+    color: var(--Grayish-Blue);
+}
+
+
+/* !CAJAS */
+.boxes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 76px;
+    gap: 25px;
+}
+
+.box {
+    max-width: 315px;
+    max-height: 225px;
+    border-radius: 10px;
+    padding: 28px;
+    background-color: var(--box-bg);
+    box-shadow: 2px 4px 18px var(--Grayish-Blue);
+}
+
+img {
+    width: 60px;
+    height: 60px;
+}
+
+.img-container {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.box-one {
+    border-top: 4px solid var(--Cyan);
+}
+
+.box-two {
+    border-top: 4px solid var(--Red);
+}
+
+.box-three {
+    border-top: 4px solid var(--Orange);
+}
+
+.box-fourth {
+    border-top: 4px solid var(--Blue);
+}
+
+
+/* !========MEDIA QUERIES======== */
+@media screen and (min-width: 1000px) {
+
+    main {
+        padding: 80px 125px;
+    }
+
+    h1, h2 {
+        font-size: 2.8rem;
+    }
+
+    .boxes-paragraph {
+        max-width: 265px;
+    }
+    
+    .box {
+        max-width: 350px;
+        max-height: 250px;
+        padding: 34px;
+    }
+
+    .boxes-container {
+        max-width: 1120px;
+        max-height: 540px;
+        margin: 60px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .team {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .supervisor {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        align-self: center;
+    }
+
+    .karma {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .calculator {
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+        align-self: center;
+    } 
+}
+
+
+
